@@ -51,9 +51,14 @@ h6 {
   --clr-bg: rgb(23, 4, 28);
 }
 
+input::placeholder {
+  font-size: 0.75rem;
+}
+
 .flex-c-c {
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-sb-c {
@@ -73,6 +78,10 @@ h6 {
 .center {
   display: grid;
   place-items: center;
+}
+
+.hidden {
+  display: none;
 }
 
 body {
@@ -130,5 +139,24 @@ body {
 }
 
 .header__right {
+  gap: 20px;
+}
+
+.my-cohorts__inner {
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.my-cohorts__cohort {
+  text-align: center;
+  gap: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 30px 20px;
+}
+
+.students__student {
   gap: 20px;
 }

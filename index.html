@@ -17,8 +17,6 @@
     <script src="./scripts/cohort.js"></script>
     <script src="./scripts/student.js"></script>
     <script src="./scripts/cohortManager.js"></script>
-    <script src="./scripts/cohortManagerRender.js"></script>
-    <script src="./scripts/app.js"></script>
     <div class="app-container">
       <aside class="menu">
         <section class="menu-section">
@@ -37,18 +35,23 @@
               <div class="menu__user-dropdown">^</div>
             </div>
             <ul class="menu__cohorts mb-20">
-              <h3 class="menu__cohorts-title">Cohorts</h3>
               <li class="menu__cohorts-item">
-                <div class="menu__cohorts-item-icon"></div>
-                <div class="menu__cohorts-item-text"><p>My Cohorts</p></div>
+                <a href="">
+                  <div class="menu__cohorts-item-icon"></div>
+                  <div class="menu__cohorts-item-text"><p>My Cohorts</p></div>
+                </a>
               </li>
               <li class="menu__cohorts-item">
-                <div class="menu__cohorts-item-icon"></div>
-                <div class="menu__cohorts-item-text"><p>Todo's</p></div>
+                <a href="">
+                  <div class="menu__cohorts-item-icon"></div>
+                  <div class="menu__cohorts-item-text"><p>Todo's</p></div>
+                </a>
               </li>
               <li class="menu__cohorts-item">
-                <div class="menu__cohorts-item-icon"></div>
-                <div class="menu__cohorts-item-text"><p>Something</p></div>
+                <a href="">
+                  <div class="menu__cohorts-item-icon"></div>
+                  <div class="menu__cohorts-item-text"><p>Something</p></div>
+                </a>
               </li>
             </ul>
           </div>
@@ -75,13 +78,61 @@
                   </select>
                 </form>
                 <div class="header__create-cohort">
-                  <button class="create-cohort">Create Cohort</button>
+                  <button class="create-cohort-btn">Create Cohort</button>
                 </div>
               </div>
             </div>
           </div>
         </header>
+        <section class="create-cohort hidden">
+          <div class="create-cohort-section">
+            <div class="create-cohort__inner">
+              <form id="createCohort">
+                <input
+                  type="text"
+                  name="cohortName"
+                  id="cohortName"
+                  placeholder="Eg. 'Cohort 04'"
+                />
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="my-cohorts">
+          <div class="my-cohorts-section">
+            <div class="my-cohorts__inner flex-c-c">
+              <div class="my-cohorts__cohort center">
+                <div class="my-cohorts__cohort-text">
+                  <h3>Cohort 01</h3>
+                  <p>Students: 13</p>
+                </div>
+                <button
+                  class="my-cohorts__cohort-view-btn"
+                  onclick="cohortManagerRender.renderStudents('Cohort 01')"
+                >
+                  View
+                </button>
+                <button class="my-cohorts__cohort-remove-btn">Remove</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="students">
+          <div class="students-section">
+            <div class="students__inner">
+              <div class="students__student flex-c-c">
+                <p>Fname</p>
+                <p>Lname</p>
+                <p>github</p>
+                <p>email</p>
+                <button class="students__student-remove-btn">Remove</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
+    <script src="./scripts/cohortManagerRender.js"></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
