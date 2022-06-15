@@ -10,7 +10,7 @@ class CohortManagerRender {
           <h3>${cohort}</h3>
           <p>Students: 13</p>
         </div>
-        <button class="my-cohorts__cohort-view-btn" onclick="cohortManagerRender.renderStudents('${cohort}')">View</button>
+        <button class="my-cohorts__cohort-view-btn" onclick="cohortManagerRender.renderStudents('${cohort}'),document.querySelector('.students-create').classList.remove('hidden')">View</button>
       </div>
       `;
     });
@@ -18,6 +18,46 @@ class CohortManagerRender {
   renderStudents(cohortName) {
     const students = document.querySelector('.students__inner');
     const cohort = cohortManager.getCohort(cohortName);
+    const addStudent = document.querySelector('#createStudentForm');
+    addStudent.innerHTML = `
+        <input
+          type="text"
+          name="createStudentCohort"
+          id="createStudentCohort"
+          disabled
+          value="${cohortName}"
+        />
+        <input
+          type="text"
+          name="createStudentFirstName"
+          id="createStudentFirstName"
+          placeholder="First name"
+          required
+        />
+        <input
+          type="text"
+          name="createStudentLastName"
+          id="createStudentLastName"
+          placeholder="Lirst name"
+          required
+        />
+        <input
+          type="text"
+          name="createStudentGitHub"
+          id="createStudentGitHub"
+          placeholder="GitHub"
+          required
+        />
+        <input
+          type="email"
+          name="createStudentEmail"
+          id="createStudentEmail"
+          placeholder="Email"
+          required
+        />
+        <button type="submit" class="students-create-btn">Add Student</button>
+    `;
+
     students.innerHTML = '';
     console.log(cohort.students);
     cohort.students.forEach((student) => {

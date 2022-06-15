@@ -1,6 +1,5 @@
 class CohortManager {
   constructor() {
-    // this.cohorts = JSON.parse(localStorage.getItem('COHORTS')) || [];
     this.cohorts = [];
   }
 
@@ -11,7 +10,6 @@ class CohortManager {
         this.cohorts.push(cohort);
       } else return `${cohortName} already exists, please choose another name`;
     } else return 'Please follow the naming format of "Cohort [0-9][0-9]"';
-    // localStorage.setItem('COHORTS', JSON.stringify(this.cohorts));
     return cohort;
   }
 

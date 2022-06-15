@@ -21,37 +21,12 @@
       <aside class="menu">
         <section class="menu-section">
           <div class="menu__inner flex-c-c">
-            <div class="menu__user mb-20">
-              <div class="menu__user-img">
-                <img
-                  src="./assets/images/ferg.jpg"
-                  alt="user profile image"
-                  class="menu__user-img"
-                />
-              </div>
-              <div class="menu__user-name">
-                <p class="menu__user-name-text">User Name</p>
-              </div>
-              <div class="menu__user-dropdown">^</div>
-            </div>
             <ul class="menu__cohorts mb-20">
               <li class="menu__cohorts-item">
-                <a href="">
+                <button onclick="cohortManagerRender.renderCohorts();">
                   <div class="menu__cohorts-item-icon"></div>
                   <div class="menu__cohorts-item-text"><p>My Cohorts</p></div>
-                </a>
-              </li>
-              <li class="menu__cohorts-item">
-                <a href="">
-                  <div class="menu__cohorts-item-icon"></div>
-                  <div class="menu__cohorts-item-text"><p>Todo's</p></div>
-                </a>
-              </li>
-              <li class="menu__cohorts-item">
-                <a href="">
-                  <div class="menu__cohorts-item-icon"></div>
-                  <div class="menu__cohorts-item-text"><p>Something</p></div>
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -121,7 +96,7 @@
           <div class="students-section">
             <div class="students-create hidden">
               <form id="createStudentForm">
-                <input
+                <!-- <input
                   type="text"
                   name="createStudentCohort"
                   id="createStudentCohort"
@@ -150,13 +125,13 @@
                   required
                 />
                 <input
-                  type="text"
+                  type="email"
                   name="createStudentEmail"
                   id="createStudentEmail"
                   placeholder="Email"
                   required
                 />
-                <button class="students-create-btn">Add Student</button>
+                <button class="students-create-btn">Add Student</button> -->
               </form>
             </div>
             <div class="students__inner">

@@ -81,7 +81,7 @@ input::placeholder {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 body {
@@ -135,6 +135,13 @@ body {
   width: 82%;
   height: 100%;
   background-color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar,
+.my-cohorts__inner::-webkit-scrollbar {
+  display: none;
 }
 
 .header__right {
