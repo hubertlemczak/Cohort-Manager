@@ -18,12 +18,12 @@ class CohortManagerRender {
   renderStudents(cohortName) {
     const students = document.querySelector('.students__inner');
     const cohort = cohortManager.getCohort(cohortName);
-    cohortManager.addStudentToCohort('Cohort 01', 'et', 'etet', 'etetet', 'etet');
     students.innerHTML = '';
     console.log(cohort.students);
     cohort.students.forEach((student) => {
       console.log(student);
       students.innerHTML += `
+      
       <div class="students__student flex-c-c">
         <p>${student.studentId}</p>
         <p>${student.firstName}</p>

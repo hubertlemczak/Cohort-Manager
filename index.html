@@ -101,7 +101,7 @@
         <section class="my-cohorts">
           <div class="my-cohorts-section">
             <div class="my-cohorts__inner flex-c-c">
-              <div class="my-cohorts__cohort center">
+              <!-- <div class="my-cohorts__cohort center">
                 <div class="my-cohorts__cohort-text">
                   <h3>Cohort 01</h3>
                   <p>Students: 13</p>
@@ -113,20 +113,60 @@
                   View
                 </button>
                 <button class="my-cohorts__cohort-remove-btn">Remove</button>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
         <section class="students">
           <div class="students-section">
+            <div class="students-create hidden">
+              <form id="createStudentForm">
+                <input
+                  type="text"
+                  name="createStudentCohort"
+                  id="createStudentCohort"
+                  disabled
+                  value="Cohort 01"
+                />
+                <input
+                  type="text"
+                  name="createStudentFirstName"
+                  id="createStudentFirstName"
+                  placeholder="First name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="createStudentLastName"
+                  id="createStudentLastName"
+                  placeholder="Lirst name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="createStudentGitHub"
+                  id="createStudentGitHub"
+                  placeholder="GitHub"
+                  required
+                />
+                <input
+                  type="text"
+                  name="createStudentEmail"
+                  id="createStudentEmail"
+                  placeholder="Email"
+                  required
+                />
+                <button class="students-create-btn">Add Student</button>
+              </form>
+            </div>
             <div class="students__inner">
-              <div class="students__student flex-c-c">
+              <!-- <div class="students__student flex-c-c">
                 <p>Fname</p>
                 <p>Lname</p>
                 <p>github</p>
                 <p>email</p>
                 <button class="students__student-remove-btn">Remove</button>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>

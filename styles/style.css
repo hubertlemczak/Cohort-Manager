@@ -120,7 +120,6 @@ body {
 }
 
 .menu__user-img {
-  background-color: red;
   aspect-ratio: 1/1;
   border-radius: 50%;
   max-width: 3.2rem;
@@ -140,6 +139,12 @@ body {
 
 .header__right {
   gap: 20px;
+}
+
+.create-cohort {
+  display: grid;
+  place-items: end;
+  margin-right: 20px;
 }
 
 .my-cohorts__inner {

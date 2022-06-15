@@ -130,5 +130,5 @@ class CohortManager {
 }
 
 const cohortManager = new CohortManager();
-console.log(cohortManager.getCohort('Cohort 01'));
-console.log(cohortManager.addStudentToCohort('Cohort 01', 'et', 'etet', 'etetet', 'etet'));
+// console.log(cohortManager.getCohort('Cohort 01'));
+// console.log(cohortManager.addStudentToCohort('Cohort 01', 'et', 'etet', 'etetet', 'etet'));
